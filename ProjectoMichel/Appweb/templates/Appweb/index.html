@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'Appweb/css/bootstrap.min.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'Appweb/css/style.css' %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static 'Appweb/css/responsive.css' %}">
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'Appweb/images/fevicon.png' %}" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static 'Appweb/css/jquery.mCustomScrollbar.min.css' %}">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+    <script src="{% static 'Appweb/js/jquery.min.js' %}"></script>
+      <script src="{% static 'Appweb/js/popper.min.js' %}"></script>
+      <script src="{% static 'Appweb/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'Appweb/js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'Appweb/js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'Appweb/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'Appweb/js/custom.js' %}"></script>
+      <!-- javascript --> 
+      <script src="{% static 'Appweb/js/owl.carousel.js' %}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js' %}"></script>
+
+</head>
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+       <div class="loader"><img src="{% static 'Appweb/images/loading.gif' %}" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+       <!-- header inner -->
+       <div class="header">
+          <div class="container">
+             <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                   <div class="full">
+                      <div class="center-desk">
+                         <div class="logo"> <a href="index.html"><img height="140" width="140" src="{% static 'Appweb/images/logos.png' %}" alt="#"></a> </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                   <div class="menu-area">
+                      <div class="limit-box">
+                         <nav class="main-menu">
+                            <ul class="menu-area-main">
+                               <li class="active"> <a  style="color: #1e90ff;" href="{% url 'Inicio' %}">Inicio</a> </li>              
+                               <li><a  style="color: #1e90ff;" href="{% url 'galeria' %}">Galeria</a></li>
+                               <li class="last"><a href="https://www.google.com/search?q=pinguinos&rlz=1C1ALOY_esMX953MX953&oq=pin&aqs=chrome.2.69i57j0i131i433j69i59j46i433l2j0j46i433l3j0i433.5734j0j15&sourceid=chrome&ie=UTF-8"><img height="30" width="30" src="{% static 'Appweb/images/search_icons.png' %}" alt="icon" ></a></li>
+                            </ul>
+                         </nav>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- end header inner -->
+    </header>
+
+    {% block content %}
+    <section >
+       
+
+      <div   id="main_slider" class="carousel slide banner-main" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li   data-target="#main_slider" data-slide-to="0" class="active"></li>
+            <li  data-target="#main_slider" data-slide-to="1"></li>
+            <li   data-target="#main_slider" data-slide-to="2"></li>
+         </ol>
+         
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container">
+                  <div class="row marginii">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="carousel-caption ">
+                           <h1 style="color: #1e90ff;" >"Los pingüinos"<strong class="color"  >La gran marcha</strong></h1>
+                           <p>Es un viaje de los que realizan los pinginos en un determinado tiempo, los pingüinos comienzan el cortejo que dará lugar a una nueva vida.</p>
+                           <a  style="color: dodgerblue;" class="btn btn-lg btn-primary"  href="https://pinguinosclub.com/perfilweb/mepatrocinas/4" role="button">apadrinar</a>
+                           <a  style="color: dodgerblue;" class="btn btn-lg btn-primary" href="{% url 'galeria' %}" role="button">galeria</a>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="img-box">
+                           <figure><img src="{% static 'Appweb/images/f.png' %}" alt="img"/></figure>
+                        </div>
+                     </div>
+                  </div> 
+               </div>
+            </div>
+           >
+            <div class="carousel-item">
+               <div class="container">
+                  <div class="row marginii">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="carousel-caption ">
+                           <h1 style="color: #1e90ff;" >¿Marinas o voladoras?<strong class="color"></strong></h1>
+                           <p>Los pingüinos son aquellas aves que se engloban dentro de la familia Spheniscidae y a su vez dentro del orden de los Sphenisciformes.</p>
+                           <p>Es un viaje de los que realizan los pinginos en un determinado tiempo, los pingüinos comienzan el cortejo que dará lugar a una nueva vida.</p>
+                           <a  style="color: dodgerblue;" class="btn btn-lg btn-primary"  href="https://pinguinosclub.com/perfilweb/mepatrocinas/4" role="button">apadrinar</a>
+                           <a  style="color: dodgerblue;" class="btn btn-lg btn-primary" href="{% url 'galeria' %}" role="button">galeria</a>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="img-box ">
+                           <figure><img src="{% static 'Appweb/images/f.png' %}" alt="img"/></figure>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <div class="row marginii">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="carousel-caption ">
+                           <h1 style="color: #1e90ff;" >¿Cuantos son??  <strong class="color"></strong></h1>
+                           <p>Hay muchos tipos de pinguinos (hay hasta 18 tipos de especies de pinguinos)</p>
+                           <p>Es un viaje de los que realizan los pinginos en un determinado tiempo, los pingüinos comienzan el cortejo que dará lugar a una nueva vida.</p>
+                           <a  style="color: dodgerblue;" class="btn btn-lg btn-primary"  href="https://pinguinosclub.com/perfilweb/mepatrocinas/4" role="button">apadrinar</a>
+                           <a  style="color: dodgerblue;" class="btn btn-lg btn-primary" href="{% url 'galeria' %}" role="button">galeria</a>  </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="img-box">
+                           <figure><img src="{% static 'Appweb/images/f.png' %}" alt="img"/></figure>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+         <i class='fa fa-angle-left'></i></a>
+         <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+         <i class='fa fa-angle-right'></i>
+         </a>
+      </div>
+   </section>
+{% endblock %}
+
+
+{% block pinguino %}
+   <div id="plant" class="plants">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 ">
+               <div class="titlepage">
+                  <h2>"Tipos Pingüinos"</h2>
+                  <span></span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/rey.png' %}" alt="img"/></figure>
+                  <h3> King</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Aptenodytes_patagonicus"> rey </a> (Aptenodytes patagonicus) es una especie de ave de la familia de los pingüinos (Spheniscidae). Es el segundo pingüino más grande dentro de las 18 especies de pingüinos que existen en el mundo después del pingüino emperador</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/humboldt.png' %}" alt="img"/></figure>
+                  <h3> Humboldt</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Spheniscus_humboldti">Humboldt</a> (Spheniscus humboldti) es una especie de ave no voladora esfenisciforme de la familia Spheniscidae. Habita en el Océano Pacífico a lo largo de la costa oeste de Sudamérica en Perú y Chile la que es recorrida por la Corriente de Humboldt o Peruana</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/magellanic.png' %}" alt="img"/></figure>
+                  <h3>Magellanic</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Spheniscus_magellanicus">Magellanic</a>(Spheniscus magellanicus), denominado también pingüino patagónico, es una especie de ave de la familia de los pingüinos (Spheniscidae), que nidifica en las islas Malvinas y en las costas e islas de la Patagonia de Argentina y Chile</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/little.png' %}" alt="img"/></figure>
+                  <h3> Azul</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Eudyptula_minor">Azul</a>(Eudyptula minor), conocido también como pingüino enano, pingüino pequeño o pingüino del hada,2​ es la especie de pingüino más pequeña y vive en las costas de Nueva Zelanda y las islas Chatham, al igual que en el sur de Australia y Tasmania.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/gentoo.png' %}" alt="img"/></figure>
+                  <h3> Gentoo</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Pygoscelis_papua">juanito</a> pingüino papúa, pingüino gentú o pingüino de vincha (Pygoscelis papua) es una especie de ave esfenisciforme de la familia Spheniscidae. Es fácilmente identificable por su parche blanco en la parte alta de la cabeza detrás de los ojos.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/fiord.png' %}" alt="img"/></figure>
+                  <h3>Fiord Land</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Eudyptes_pachyrhynchus">Fiordland </a>(Eudyptes pachyrhynchus),2​ o tawaki en lengua maorí, es una especie de ave esfenisciforme de la familia Spheniscidae nativa de Nueva Zelanda. Como su nombre indica cría en la costa de Fiordland</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/yellow.png' %}" alt="img"/></figure>
+                  <h3>Yellow-Eyed</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Megadyptes_antipodes">ojigualdo </a>o de ojo amarillo, (Megadyptes antipodes), es una de las dos especies del género Megadyptes, junto con el extinto Megadyptes waitaha. Habita el sureste de Nueva Zelanda. Su distribución geográfica abarca la Isla del Sur de Nueva Zelanda, la Isla Stewart y los archipiélagos de Auckland y de Campbell, más al sur.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/african.png' %}" alt="img"/></figure>
+                  <h3>African</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Spheniscus_demersus"> El Cabo</a>(Spheniscus demersus),2​ también conocido como pingüino africano o de anteojos, es la única especie de pingüino que vive en el continente africano y una de las cuatro del género Spheniscus. En inglés es conocido también como jackass penguin debido a las vocalizaciones similares a las de un burro.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/galapagos.png' %}" alt="img"/></figure>
+                  <h3>Galapagos</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="http://descubriendogalapagos.ec/dg_species/pinguino-galapagos/">Galapagos</a>endémico del archipiélago, es la especie de pingüino que vive más al norte del mundo. La mayoría de su población se encuentra en la costa rocosa de las islas Fernandina e Isabela, las más occidentales de Galápagos.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/macaroni.png' %}" alt="img"/></figure>
+                  <h3>Macaroni</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://oceanwide-expeditions.com/es/destacados/vida-silvestre/pinguino-macaroni">Macaroni</a>l nombre "macaroni" hace referencia a las plumas anaranjadas del penacho. Macaroni era la jerga inglesa del siglo XVIII para referirse a un hombre que vestía más allá de los dictados de la moda (como en la canción "Yankee Doodle Dandy").
+                     Los pingüinos macaroni pueden viajar 400 km para encontrar un lugar de caza.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/eudyptes.png' %}" alt="img"/></figure>
+                  <h3>Eudyptes</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Eudyptes">Eudyptes</a>es un género de aves esfenisciformes de la familia Spheniscidae. Contiene siete especies de pingüinos que son conocidos como pingüinos crestados. Es el género de pingüinos más abundante, tanto en número de especies como en individuos.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/rockhopper.png' %}" alt="img"/></figure>
+                  <h3>Rockhopper</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Eudyptes_chrysocome">de penacho amarillo austral</a>o saltarrocas austral (Eudyptes chrysocome) es una especie de pingüino estrechamente relacionada con el pingüino macaroni.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/snares.png' %}" alt="img"/></figure>
+                  <h3>Snares</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Eudyptes_robustus">Snares</a>(Eudyptes robustus)2​ es una especie de ave esfenisciforme de la familia Spheniscidae nativa de Nueva Zelanda. La especie cría en las islas Snares, un grupo de islas al sur de las costas de la isla Sur.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/adelie.png' %}" alt="img"/></figure>
+                  <h3>Adelie</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Pygoscelis_adeliae">Adelie</a>(Pygoscelis adeliae) es, junto con el pingüino emperador, una de las dos únicas especies de pingüinos que viven en el continente antártico, propiamente. Esta especie es común a lo largo de toda la costa antártica e islas cercanas.</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/chinstrap.png' %}" alt="img"/></figure>
+                  <h3>Chinstrap</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Pygoscelis_antarcticus">barbijo </a>(Pygoscelis antarcticus) es una especie de pingüino que se encuentra en las Islas Sandwich del Sur, Antártida, las islas Orcadas del Sur, Shetland del Sur, Georgias del Sur, Isla Bouvet, Islas Balleny e Isla Pedro I. Su nombre viene de la delgada franja negra en la parte baja de la cabeza que lo hace ver como si trajera puesto un casco negro</p>
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+               <div class="plants-box">
+                  <figure><img src="{% static 'Appweb/images/emperador.png' %}" alt="img"/></figure>
+                  <h3>Emperador</h3>
+                  <p>El pingüino <a style="color: #1e90ff;" rel="nofollow" href="https://es.wikipedia.org/wiki/Aptenodytes_forsteri">Emperador</a>Esta especie, endémica de la Antártida, es la de mayor tamaño y peso de todos los pingüinos. El macho y la hembra son similares en plumaje y tamaño; pueden superar los 120 cm de altura y pesan entre 20 y 45 kg. La espalda, las alas y la cabeza son de color negro, la parte anterior es blanca desde las patas hasta el vientre, con el pecho de un tono amarillo pálido y dos auriculares a la altura de los oídos de un llamativo amarillo brillante</p>
+               </div>
+            </div>
+           
+         </div>
+      </div>
+   </div>
+   {% endblock pinguino %}
+    
+</body>
+</html>
